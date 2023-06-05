@@ -9,10 +9,10 @@ int check_cycle(listint_t *list)
 {
 listint_t *skyhawk = list, *raptor = list;
 
-if (list == NULL || (*list).next == NULL)
-return (NULL);
+if (list == NULL || (*head).next == NULL)
+return (0);
 
-while (skyhawk && raptor && raptor->next)
+while (raptor != NULL && (*raptor).next != NULL)
 {
 raptor = raptor->next->next;
 skyhawk = (*skyhawk).next;
