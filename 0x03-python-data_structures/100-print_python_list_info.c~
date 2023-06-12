@@ -7,32 +7,7 @@
  */
 void print_python_list_info(PyObject *p)
 {
-<<<<<<< HEAD
-Py_ssize_t size, i;
-PyObject *item;
-
-size = Py_SIZE(p);
-printf("[*] Size of the Python List = %zd\n", size);
-
-if (PyList_Check(p))
-{
-alloc = ((PyListObject *)p)->allocated;
-printf("[*] Allocated = %zd\n", alloc);
-}
-else
-{
-printf("Error: Object is not a list.\n");
-return;
-}
-
-for (i = 0; i < size; i++)
-{
-printf("Element %zd: ", i);
-item = PyList_GetItem(p, i);
-printf("%s\n", (*Py_TYPE(item)).tp_name);
-}
-=======
-  Py_ssize_t size, i, alloc;
+  Py_ssize_t size, i;
   PyObject *item;
 
   size = Py_SIZE(p);
@@ -55,5 +30,4 @@ printf("%s\n", (*Py_TYPE(item)).tp_name);
       item = PyList_GetItem(p, i);
       printf("%s\n", (*Py_TYPE(item)).tp_name);
     }
->>>>>>> 94545192706399f9615b2335881177f8b25e04fb
 }
