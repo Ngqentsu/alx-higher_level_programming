@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Declare a class Square."""
 
+
 class Square:
     """Represent a square object."""
 
@@ -43,17 +44,17 @@ class Square:
         return self.area() != other.area()
 
     def __ge__(self, other):
-        """Check if the area of the first square is greater than or equal to the second square."""
+        """Check if the area of the first square is >= to the second square."""
         return self.area() >= other.area()
 
     def __le__(self, other):
-        """Check if the area of the first square is less than or equal to the second square."""
+        """Check if the area of the first square is =< to the second square."""
         return self.area() <= other.area()
 
     def __gt__(self, other):
-        """Check if the area of the first square is greater than the second square."""
+        """Check if the area of the first square is > the second square."""
         return self.area() > other.area()
 
     def __lt__(self, other):
-        """Check if the area of the first square is less than the second square."""
+        """Check if the area of the first square is < the second square."""
         return self.area() < other.area()
