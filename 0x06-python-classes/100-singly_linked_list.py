@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Declare class Node and class SinglyLinkedList for a singly linked list."""
 
+
 class Node:
     """Represent a node in a singly-linked list."""
 
@@ -19,7 +20,7 @@ class Node:
     def data(self):
         """Retrieves the data of the Node."""
         return self.__data
-    
+
     @property
     def next_node(self):
         """Retrieves the next node in the linked list."""
@@ -48,6 +49,7 @@ class Node:
         if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
+
 
 class SinglyLinkedList:
     """Represents a singly-linked list."""
@@ -81,7 +83,7 @@ class SinglyLinkedList:
         """Returns a string representation of the linked list."""
         if self.__head is None:
             return ""
-            
+
         items = []
         tmp = self.__head
         while tmp is not None:
