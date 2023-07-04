@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""Defines a function that add integers."""
+
+
 def add_integer(a, b=98):
     """
     Adds two integers.
