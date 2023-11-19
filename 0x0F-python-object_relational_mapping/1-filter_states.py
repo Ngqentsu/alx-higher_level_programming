@@ -5,7 +5,7 @@ import MySQLdb
 import sys
 
 
-def list_states(username, password, database):
+def list_states_starting_with_n(username, password, database):
     """Listing all the states."""
     try:
         db = MySQLdb.connect(host="localhost", user=username,
@@ -33,4 +33,4 @@ if __name__ == "__main__":
     else:
         username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
 
-        list_states(username, password, database)
+        list_states_starting_with_n(username, password, database)
