@@ -30,8 +30,12 @@ def search_states(username, password, database, state_name):
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Usage: ./2-my_filter_states.py <username> <password> <database> <state_name>")
+        print("Usage: ./2-my_filter_states.py <username>"
+              " <password> <database> <state_name>")
     else:
-        username, password, database, state_name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+        username = sys.argv[1]
+        password = sys.argv[2]
+        database = sys.argv[3]
+        state_name = sys.argv[4]
 
         search_states(username, password, database, state_name)
