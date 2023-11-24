@@ -8,6 +8,9 @@ from sqlalchemy import String
 from sqlalchemy import ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 
+Base = declarative_base()
+
+
 class City(Base):
     """Class that defines each city"""
     __tablename__ = 'cities'
