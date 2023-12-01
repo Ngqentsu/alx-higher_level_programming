@@ -12,7 +12,7 @@ if __name__ == "__main__":
     url = "https://api.github.com/repos/{}/{}/commits".format(
         argv[2], argv[1])
     try:
-        response = resquests.get(url).json()
+        response = requests.get(url).json()
         for index, response in enumerate(response[:10]):
             try:
                 sha = commit["sha"]
