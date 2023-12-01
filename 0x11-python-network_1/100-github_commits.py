@@ -19,8 +19,8 @@ if __name__ == "__main__":
 
         for commit in commits[:10]:
             sha = commit.get("sha")
-            author_name = commit.get("commit", {}).get("author", {}).get("name")
-            print("{}: {}".format(sha, author_name))
+            auth_name = commit.get("commit", {}).get("author", {}).get("name")
+            print("{}: {}".format(sha, auth_name))
 
     except requests.RequestException as e:
         print("Error: {}".format(e))
