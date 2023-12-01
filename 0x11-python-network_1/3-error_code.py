@@ -12,7 +12,7 @@ from sys import argv
 if __name__ == "__main__":
     try:
         with urllib.request.urlopen(argv[1]) as response:
-            response_content = response.read()
-            print(responseinfo().get('X-Request-Id'))
+             response_content = response.read()
+            print(response.read().decode('utf-8'))
     except urllib.error.HTTPError as e:
         print("Error code: {}".format(e.code))
