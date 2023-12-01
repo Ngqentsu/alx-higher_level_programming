@@ -6,6 +6,7 @@
 
 import urllib.request
 import urllib.error
+from urllib.error import HTTPError
 from sys import argv
 
 
