@@ -9,16 +9,20 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    url = "https://api.github.com/repos/{}/{}/commits".format(
-        argv[2], argv[1])
+    rep_name = argv[1]
+    rep_owner = argv[2]
+    url = f'https://api.github.com/repos/{rep_owner}/{rep_name}/commits'
+
     try:
-        response = requests.get(url).json()
-        for index, response in enumerate(response[:10]):
-            try:
-                sha = commit["sha"]
-                author_name = commit["commit"]["author"]["name"]
-                print("{}: {}".format(sha, author_name))
-            except (KeyError, IndexError):
-                pass
+        response = requests.get(url)
+        commits = response.json()
+
+        for commit in commits[:10]:
+            sha = commit.get("sha")
+            author_name = commit.get("commit", {}).get("author", {}).get("name")
+            print("{}: {}".format(sha, author_name))
+
     except requests.RequestException as e:
+        print("Error: {}".format(e))
+    except IndexError:
         pass
