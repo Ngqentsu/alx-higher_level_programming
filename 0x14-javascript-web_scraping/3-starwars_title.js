@@ -9,9 +9,9 @@ const url = 'https://swapi-api.alx-tools.com/api/films/';
 
 // Use the 'request' module to perform an HTTP GET request to the constructed URL.
 // Log title if successful, log error if not.
-request(url + process.argv[2], function (err, response, body) {
-  if (err) {
-    console.log(err);
+request(url + process.argv[2], function (error, response, body) {
+  if (error) {
+    console.log(error);
     return;
   }
 
