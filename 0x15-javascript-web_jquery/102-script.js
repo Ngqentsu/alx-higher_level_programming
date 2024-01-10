@@ -6,7 +6,6 @@ $('document').ready(function () {
     console.log('Language Code:', languageCode);
 
     $.get(`${url}lang=${languageCode}`, function (data) {
-      console.log('API Response:', data);
       $('DIV#hello').html(data.hello);
     });
   });
